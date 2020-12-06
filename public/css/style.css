@@ -23,7 +23,12 @@ hr {
   color: #ddd;
 }
 
-
+/* code */
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #393e46;
+  background: #333;
+}
 code { background: #393e46; }
 pre code { background: none; }
 
