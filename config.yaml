@@ -2,8 +2,8 @@ baseurl: "http://example.org/"
 languageCode: "en-us"
 title: "infcode"
 theme: "xmin"
-googleAnalytics: ""
-disqusShortname: ""
+googleAnalytics: "G-9ZZ9N6HS97"
+disqusShortname: "infc0de"
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 footnotereturnlinkcontents: "↩"
 
