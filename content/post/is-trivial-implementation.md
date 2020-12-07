@@ -2,6 +2,12 @@
 title: "std::is_trivial implementation"
 date: 2020-12-04T17:22:11+03:00
 draft: true
+categories:
+  - C++
+tags:
+  - c++
+  - stl
+  - typetraits
 ---
 
 Recently I've tried to write several data structures and I wanted different allocations depending on if the structure is [trivial](https://en.cppreference.com/w/cpp/named_req/TrivialType) or not.
@@ -15,10 +21,10 @@ I guess that some intrinsics that were starting with "**__has**" prefix will sta
 So here is my implementation of **is_trivial**:  
 
 ```c++
-template <typename T, T v>
+    template <typename T, T v>
     struct integral_constant
     {
-	static constexpr const T value = v;
+        static constexpr const T value = v;
     };
 
     template <bool Bool>
@@ -55,11 +61,6 @@ template <class _Tp> struct _LIBCPP_TEMPLATE_VIS is_trivial
 #endif
     {};
 
-#if _LIBCPP_STD_VER > 14 && !defined(_LIBCPP_HAS_NO_VARIABLE_TEMPLATES)
-template <class _Tp>
-_LIBCPP_INLINE_VAR _LIBCPP_CONSTEXPR bool is_trivial_v
-    = is_trivial<_Tp>::value;
-#endif
 ```
 
   
@@ -73,4 +74,11 @@ struct is_trivial : bool_constant<__is_trivially_constructible(_Ty) && __is_triv
 };
 ```
 
+All versions seems pretty identical. In Clang's version there are some backward compatibility checks.  
+Implementations of **integral_constant**, **bool_constant** you can find from the links abouve.  
+And for C++17 we can use inlined variables and make **is_trivial_v**.  
 
+```c++
+template <typename T>
+inline constexpr bool is_trivial_v = is_trivial<T>::value;
+```
