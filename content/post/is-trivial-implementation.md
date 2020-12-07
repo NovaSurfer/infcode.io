@@ -73,10 +73,9 @@ struct is_trivial : bool_constant<__is_trivially_constructible(_Ty) && __is_triv
     // determine whether _Ty is a trivial type
 };
 ```
-
-All versions seems pretty identical. In Clang's version there are some backward compatibility checks.  
-Implementations of **integral_constant**, **bool_constant** you can find from the links abouve.  
-And for C++17 we can use inlined variables and make **is_trivial_v**.  
+Something similar can be found in EASTL (type_pod.h) and Boost libraries. All versions seem pretty identical. In Clang's version, there are some backward compatibility checks.
+Implementations of **integral_constant**, **bool_constant** you can find from the links above.
+And for C++17 we can use the inlined variables feature and make **is_trivial_v**.  
 
 ```c++
 template <typename T>
