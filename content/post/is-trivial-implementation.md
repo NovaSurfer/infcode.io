@@ -1,7 +1,6 @@
 ---
 title: "std::is_trivial implementation"
 date: 2020-12-04T17:22:11+03:00
-draft: true
 categories:
   - C++
 tags:
