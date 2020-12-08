@@ -1,5 +1,5 @@
 ---
 title: Home
 ---
-![inf](/inf.png/)  
+![inf](inf.png/)  
 c / c++ and gamedev
