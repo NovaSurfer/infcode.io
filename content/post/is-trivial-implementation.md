@@ -80,3 +80,10 @@ And for C++17 we can use the inlined variables feature and make **is_trivial_v**
 template <typename T>
 inline constexpr bool is_trivial_v = is_trivial<T>::value;
 ```
+  
+Or we can make it without integral / bool constan classes:
+
+```c++
+template <typename T>
+inline constexpr bool is_trivial_v = __is_trivial(T);
+```
