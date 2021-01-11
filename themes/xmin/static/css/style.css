@@ -13,6 +13,7 @@ body {
   text-decoration: none;
   background: #393e46;
   padding: 5px;
+  margin: 5px;
   border-radius: 5px;
 }
 .menu, .article-meta, footer { text-align: center; }
