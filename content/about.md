@@ -2,7 +2,7 @@
 title: About
 ---
 
-Hi, I'm Maksim Ruts, a 22 years old programmer, I currently leave in Minsk, Belarus.  
+Hi, I'm Maksim Ruts, a 25 years old programmer, I currently leave in Krakow, Poland.  
 My work mainly related with C / C++ programming and game development.  
 I had some experience with C#, Python, Lua and GDScipt as well.  
   
